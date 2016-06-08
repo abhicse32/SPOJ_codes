@@ -1,0 +1,20 @@
+while True:
+	str_ = raw_input()
+	if str_=='00e0':
+		break
+	print "str_",
+	num=int(str_[:2])
+	num*=10**(int(str_[3:]))
+	cur_start,power,index_increase=2,1,0
+	while True:
+		divisor=2**power
+		if(num- cur_start)%divisor==0:
+			cur_start+=2**index_increase;
+			num-=2**index_increase;
+		else:
+			cur_start-=2**index_increase;
+		power+=1;
+		index_increase+=2
+		if num==cur_start:
+			break
+	print "\n",num,
