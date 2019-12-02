@@ -29,7 +29,7 @@ int main(){
                 else cout << endl <<int(pow(l,k+1))%10 ;
                 break;
 		}
-	}
+    	    }
 	}
 	cout <<endl;
 }
